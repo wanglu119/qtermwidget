@@ -167,3 +167,6 @@ key Next  +Shift-AppScreen  : scrollPageDown
 
 key ScrollLock     : scrollLock
 
+
+key Clear -AnyMod+KeyPad+AppKeyPad : "\E[E"
+key Clear +AnyMod+KeyPad+AppKeyPad : "\E[1;*E"
