@@ -36,11 +36,11 @@
 // Konsole
 //#include "konsole_export.h"
 #define KONSOLEPRIVATE_EXPORT
+#include "KeyboardTranslator.h"
 
 namespace Konsole
 {
 
-class KeyboardTranslator;
 class HistoryType;
 class Screen;
 class ScreenWindow;
@@ -443,6 +443,8 @@ signals:
    * @param blinkingCursorEnabled Whether to enable blinking or not
    */
   void cursorChanged(KeyboardCursorShape cursorShape, bool blinkingCursorEnabled);
+
+  void handleCommandFromKeyboard(KeyboardTranslator::Command command);
 
 protected:
   virtual void setMode(int mode) = 0;

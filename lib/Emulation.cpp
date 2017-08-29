@@ -108,6 +108,10 @@ ScreenWindow* Emulation::createWindow()
 
     connect(this , SIGNAL(outputChanged()),
             window , SLOT(notifyOutputChanged()) );
+
+    connect(this, &Emulation::handleCommandFromKeyboard,
+            window, &ScreenWindow::handleCommandFromKeyboard);
+
     return window;
 }
 
