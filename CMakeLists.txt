@@ -96,6 +96,7 @@ set(UI
 set(HDRS_DISTRIB
     lib/qtermwidget.h
     lib/Emulation.h
+    lib/KeyboardTranslator.h
     lib/Filter.h
 )
 
