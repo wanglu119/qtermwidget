@@ -697,6 +697,9 @@ private:
 
     bool handleShortcutOverrideEvent(QKeyEvent* event);
 
+    bool isLineChar(wchar_t c) const;
+    bool isLineCharString(const std::wstring& string) const;
+
     // the window onto the terminal screen which this display
     // is currently showing.
     QPointer<ScreenWindow> _screenWindow;
@@ -826,6 +829,8 @@ private:
 
     int _leftBaseMargin;
     int _topBaseMargin;
+
+    bool _drawLineChars;
 
 public:
     static void setTransparencyEnabled(bool enable)
